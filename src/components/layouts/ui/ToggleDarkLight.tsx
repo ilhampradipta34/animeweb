@@ -1,4 +1,3 @@
-// components/ui/ToggleDarkLight.tsx
 import { useTheme } from "../context/ThemeProvider"; 
 import { Sun, Moon } from "lucide-react";
 

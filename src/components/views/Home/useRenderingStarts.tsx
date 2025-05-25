@@ -28,7 +28,7 @@ const useRenderStars = () => {
           );
         }
     
-        return stars; // <- array langsung, bukan div
+        return stars; 
       };
 
     return {

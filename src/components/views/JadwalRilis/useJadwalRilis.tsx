@@ -40,7 +40,6 @@ const getAnimeSchedule = async () => {
       router.isReady && !!currentPage && !!currentLimit && !!currentFilterDay,
 
   });
-  console.log(dataAnimeSchedule);
 
   return {
     days,

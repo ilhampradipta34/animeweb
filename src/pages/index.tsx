@@ -11,7 +11,6 @@ export async function getServerSideProps() {
       animeService.getAnimeSeasonNow(),
       animeService.getTopAnime(),
       animeService.getAnime(`order_by=popularity&sort=asc&limit=${LIMIT_POPULAR_ANIME}&page=${PAGE_DEFAULT}`),
-      // animeService.getAnime(`status=Currently Airing&order_by=score&sort=asc`),
     ]);
 
     return {
@@ -19,7 +18,6 @@ export async function getServerSideProps() {
         seasonNow: seasonNowRes.data.data,
         topAnime: topAnimeRes.data.data,
         popularAnime: popularAnimeRes.data.data,
-        // onGoingAnime: onGoingAnime.data.data,
       }
     };
 
@@ -40,7 +38,6 @@ interface PropTypes {
   seasonNow: Anime[];
   topAnime: Anime[];
   popularAnime: Anime[];
-  // onGoingAnime: Anime[];
 }
 
 

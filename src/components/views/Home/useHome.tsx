@@ -38,7 +38,6 @@ const useHome = (initialData: Anime[] = []) => {
     loading,
     hasMore,
     handleViewMore,
-    // tambahkan logika lain kalau ada
   };
 };
 

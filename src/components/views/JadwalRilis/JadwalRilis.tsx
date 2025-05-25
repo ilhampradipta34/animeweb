@@ -1,4 +1,3 @@
-// import useChangeUrl from "@/hooks/useChangeUrl";
 import useChangeUrl from "@/hooks/useChangeUrl";
 import useJadwalRilis from "./useJadwalRilis";
 import { useRouter } from "next/router";
@@ -15,8 +14,6 @@ const JadwalRilis = () => {
   const router = useRouter();
   const { renderStars } = useRenderStars();
   const {
-    //   currentLimit,
-    //   currentPage,
     handleChangeFilterDay,
     setUrlJadwalRilis,
     currentFilterDay,
@@ -27,9 +24,6 @@ const JadwalRilis = () => {
     dataAnimeSchedule,
     isLoadingAnimeSchedule,
     isFetchingAnimeSchedule,
-    // isRefetchingAnimeSchedule,
-    // // refetchingAnimeSchedule
-    // isSuccessGetAnimeSchedule,
   } = useJadwalRilis();
   const jumlahAnimeHariIni = dataAnimeSchedule?.pagination?.items?.total;
 
@@ -43,24 +37,6 @@ const JadwalRilis = () => {
 
   return (
     <div className="flex w-full -mt-5 md:justify-between">
-      {/* <div className="flex flex-col gap-5 w-1/6 items-start sticky top-20 z-10">
-        {days.map((day) => (
-          <div key={day} className="w-full">
-            <button
-              onClick={() => {
-                handleChangeFilterDay(day); // kalau kamu butuh ini untuk fungsi lain
-              }}
-              className={`py-2 w-full rounded-tr-lg border-sky-400 border font-semibold text-sm capitalize shadow-lg line-clamp-1 px-1 mx-1 transition-colors duration-1000 ${
-                currentFilterDay === day
-                  ? "bg-sky-400 text-black"
-                  : "bg-black/5 dark:text-white"
-              }`}
-            >
-              {day}
-            </button>
-          </div>
-        ))}
-      </div> */}
       <div className="w-1/6">
         <div className="flex flex-col gap-5 sticky top-20 z-10">
           {days.map((day) => (

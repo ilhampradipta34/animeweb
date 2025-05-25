@@ -9,7 +9,6 @@ import { ChangeEvent } from "react";
 
 const useChangeUrl = () => {
   const router = useRouter();
-  // const debounce = useDeboundce();
 
   const currentLimit = Number(router.query.limit);
   const currentPage = Number(router.query.page);
@@ -103,15 +102,6 @@ const useChangeUrl = () => {
     router.replace({ query });
   };
 
-  //   const handleChangeFilterListAnimeGenre = (genres: string) => {
-  //   router.push({
-  //     query: {
-  //       ...router.query,
-  //       genres,
-  //       page: PAGE_DEFAULT,
-  //     },
-  //   });
-  // };
 
   const handleChangeFilterListAnimeGenre = (genres: string) => {
     const updatedQuery = { ...router.query };
@@ -184,15 +174,6 @@ const useChangeUrl = () => {
     });
   };
   
-  // const handleChangeIsFeatured = (isFeatured: string) => {
-  //   router.push({
-  //     query: {
-  //       ...router.query,
-  //       isFeatured,
-  //       page: PAGE_DEFAULT
-  //     }
-  //   })
-  // }
 
   const handleChangePage = (page: number) => {
     router.push({
@@ -215,28 +196,6 @@ const useChangeUrl = () => {
     });
   };
 
-  // const handleSearch = (e: ChangeEvent<HTMLInputElement>) => {
-  //   debounce(() => {
-  //     const search = e.target.value;
-  //     router.push({
-  //       query: {
-  //         ...router.query,
-  //         search,
-  //         page: PAGE_DEFAULT,
-  //       },
-  //     });
-  //   }, DELAY);
-  // };
-
-  // const handleClearSearch = () => {
-  //   router.push({
-  //     query: {
-  //       ...router.query,
-  //       search: "",
-  //       page: PAGE_DEFAULT,
-  //     },
-  //   });
-  // };
 
   return {
     currentLimit,
@@ -261,12 +220,6 @@ const useChangeUrl = () => {
     handleChangePage,
     setUrlTopAnime,
     handleChangeFilterTopAnime,
-    // handleSearch,
-    // handleClearSearch,
-    // setUrlExplore,
-    // handleChangeCategory,
-    // handleChangeIsFeatured,
-    // handleChangeIsOnline
   };
 };
 

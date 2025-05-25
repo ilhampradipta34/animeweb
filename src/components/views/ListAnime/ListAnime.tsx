@@ -1,4 +1,3 @@
-// import useChangeUrl from "@/hooks/useChangeUrl";
 import useChangeUrl from "@/hooks/useChangeUrl";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
@@ -16,8 +15,6 @@ const ListAnime = () => {
   const router = useRouter();
   const { renderStars } = useRenderStars();
   const {
-    //   currentLimit,
-    //   currentPage,
     setUrlListAnime,
   } = useChangeUrl();
 
