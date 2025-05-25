@@ -94,7 +94,7 @@ const DetailAnime = () => {
             </div>
 
             {/* Rating & Bookmark */}
-            <div className="flex flex-col w-2/6 items-center gap-4 md:-mt-14 mb-5 ">
+            <div className="flex justify-center flex-col w-[120px] items-center gap-4 md:-mt-14 mb-5 ">
               <div className="text-center w-[200px] md:w-[140px] bg-[#111] p-4 rounded-md">
                 <p className="text-sm mb-2">
                   Rating {dataAnimeId?.score ?? "?"}
@@ -105,7 +105,7 @@ const DetailAnime = () => {
               </div>
               <Button
                 onPress={() => setShowTrailer(true)}
-                className="bg-red-600 w-[200px] font-semibold text-white md:w-3/6 -mt-2"
+                className="bg-red-600 w-[200px] font-semibold text-white md:w-[140px] -mt-2"
                 radius="sm"
               >
                 Trailer
