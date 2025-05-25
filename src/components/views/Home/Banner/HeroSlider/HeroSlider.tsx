@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
 import { Anime } from "@/types/Anime";
-import { Button } from "@heroui/react";
+import { Button, Spinner } from "@heroui/react";
 import { cn } from "@/utils/cn";
 import useRenderStars from "../../useRenderingStarts";
 import Link from "next/link";
@@ -53,7 +53,7 @@ const HeroSlider = ({ dataBanner }: HeroSliderProps) => {
   if (dataBanner.length === 0) {
     return (
       <section className="relative w-full h-[70vh] flex items-center justify-center">
-        <p className="text-white text-lg">Memuat banner...</p>
+          <Spinner color="primary" label="Loading..." />
       </section>
     );
   }
