@@ -73,7 +73,7 @@ const NavbarPage = () => {
           <NavbarItem className="md:relative flex gap-4">
             <Input
               isClearable
-              className="w-[300px]"
+              className="w-[230px]"
               placeholder="search nama anime"
               startContent={<CiSearch />}
               onClear={() => setSearch("")}
@@ -118,7 +118,7 @@ const NavbarPage = () => {
         </NavbarContent>
       </Navbar>
       {/* Ini hanya muncul di mobile */}
-      <div className="md:hidden fixed bottom-0 left-0 w-full z-40 px-4 py-2 bg-white dark:bg-black border-t border-gray-300 dark:border-gray-700">
+      <div className="md:hidden fixed bottom-0 left-0 w-full z-50 px-4 py-2 bg-white dark:bg-black border-t border-gray-300 dark:border-gray-700">
         <div className="flex justify-around">
           {NAV_ITEMS_MOBILE.map((item) => (
             <Link

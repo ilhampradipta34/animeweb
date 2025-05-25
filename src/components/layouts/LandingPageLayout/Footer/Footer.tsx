@@ -4,7 +4,7 @@ import { NAV_ITEMS, SOCIALS_ITEMS } from "../LandingPageConstant";
 
 const FooterPage = () => {
   return (
-    <div className="flex flex-col w-full bg-blue-950 items-center p-6 justify-between text-center lg:flex-row md:text-left xl:p-20">
+    <div className="flex flex-col w-full bg-blue-950 items-center p-6 justify-between text-center md:flex-row md:text-left xl:p-20">
       <Image src={"/images/logowhite.png"} alt="logo" width={200} height={50} />
 
       <div className="mb-4 flex flex-col gap-4 md:mb-0">
