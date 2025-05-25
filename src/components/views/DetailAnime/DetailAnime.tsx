@@ -11,7 +11,7 @@ const DetailAnime = () => {
   const [showTrailer, setShowTrailer] = useState(false);
 
   return (
-    <div className="px-8 w-full">
+    <div className="w-full">
       {!isLoadingAnimeId && dataAnimeId ? (
         <div className="relative w-full shadow-md rounded overflow-visible pb-20 bg-[#1c1c2a] text-white">
           {/* Banner Background */}
@@ -26,7 +26,7 @@ const DetailAnime = () => {
             />
 
             {/* Gambar kecil ngambang */}
-            <div className="flex bottom-[-220px] absolute md:bottom-[-100px] left-4 md:left-8 w-1/3 h-[200px] md:w-[200px] md:h-[280px] rounded overflow-hidden border-4 border-white dark:border-black shadow-xl bg-white z-10">
+            <div className="flex bottom-[-200px] absolute md:bottom-[-100px] left-2 md:left-8 w-[120px] h-[170px] md:w-[200px] md:h-[280px] rounded overflow-hidden border-4 border-white dark:border-black shadow-xl bg-white z-10">
               <Image
                 src={dataAnimeId?.images?.webp?.large_image_url}
                 alt={`thumb-${dataAnimeId?.title}`}
@@ -38,7 +38,7 @@ const DetailAnime = () => {
           </div>
 
           {/* Konten Detail */}
-          <div className="ml-36 md:ml-60 flex flex-col md:flex-row mt-28 px-8 gap-6 justify-between">
+          <div className="ml-28 md:ml-60 flex flex-col md:flex-row mt-28 px-8 gap-6 justify-between">
             {/* Detail Text */}
             <div className="-mt-20">
               <h2 className="text-2xl md:text-3xl font-semibold mb-4">
@@ -95,7 +95,7 @@ const DetailAnime = () => {
 
             {/* Rating & Bookmark */}
             <div className="flex flex-col w-2/6 items-center gap-4 md:-mt-14 mb-5 ">
-              <div className="text-center w-[350px] md:w-[140px] bg-[#111] p-4 rounded-md">
+              <div className="text-center w-[200px] md:w-[140px] bg-[#111] p-4 rounded-md">
                 <p className="text-sm mb-2">
                   Rating {dataAnimeId?.score ?? "?"}
                 </p>
@@ -105,7 +105,7 @@ const DetailAnime = () => {
               </div>
               <Button
                 onPress={() => setShowTrailer(true)}
-                className="bg-red-600 w-[350px] font-semibold text-white md:w-3/6 -mt-2"
+                className="bg-red-600 w-[200px] font-semibold text-white md:w-3/6 -mt-2"
                 radius="sm"
               >
                 Trailer
@@ -126,7 +126,7 @@ const DetailAnime = () => {
       ) : null}
       {showTrailer && (
         <div className="fixed inset-0 z-[999] bg-black bg-opacity-70 flex items-center justify-center  backdrop-blur-sm">
-          <div className="bg-transparent p-4 rounded-lg shadow-lg w-full max-w-2xl relative">
+          <div className="bg-transparent p-4 rounded-lg shadow-lg md:w-full max-w-2xl relative">
             {/* Tombol Close */}
             <button
               className="absolute w-6 h-6 text-[20px] font-bold -top-5 flex items-center justify-center rounded-full bg-white right-0 text-red-500 hover:text-red-500 leading-none"

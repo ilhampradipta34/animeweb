@@ -239,7 +239,7 @@ const HeroSlider = ({ dataBanner }: HeroSliderProps) => {
       </section>
       {showTrailer && (
         <div className="fixed inset-0 z-[999] bg-black bg-opacity-70 flex items-center justify-center  backdrop-blur-sm">
-          <div className="bg-transparent p-4 rounded-lg shadow-lg w-full max-w-2xl relative">
+          <div className="bg-transparent p-4 rounded-lg shadow-lg md:w-full max-w-2xl relative">
             {/* Tombol Close */}
             <button
               className="absolute w-6 h-6 text-[20px] font-bold -top-5 flex items-center justify-center rounded-full bg-white right-0 text-red-500 hover:text-red-500 leading-none"

@@ -125,9 +125,9 @@ const NavbarPage = () => {
               key={`navmobile-${item.label}`}
               href={item.href}
               className={cn(
-                "flex flex-col items-center text-xs font-medium text-white hover:text-blue-800 transition gap-1",
+                "flex flex-col items-center text-xs font-medium dark:text-white text-black hover:text-blue-800 transition gap-1",
                 {
-                  "font-bold border-b-2 text-blue-600 border-blue-700":
+                  "font-bold border-b-2 dark:text-blue-600 text-blue-600 border-blue-700":
                     isActive(item.href),
                 }
               )}
